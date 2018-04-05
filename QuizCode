@@ -1,0 +1,65 @@
+##### Question 2 ######
+### create and open shell file regurgitator.sh 
+
+vi regurgitator.sh 
+
+### insert the content to the file
+
+#!/bin/bash
+echo "Positional parameter \$0 is $0"
+x=1
+for i in "$@"
+do
+	echo "Positional parameter \$$x is $i"
+	x=$(expr $x + 1)
+done
+
+### save and exit 
+### by press 'esc' ':' 'x' and 'enter'
+
+### execute the command
+
+chmod u+x regurgitator.sh
+
+### example 1
+
+./regurgitator.sh 100 150 170 180 200
+
+### example 2 and 3
+
+./regurgitator.sh 1 19999 2
+./regurgitator.sh 2011 999 888
+
+##### Question 3 ######
+### create and open fibonacci.sh
+
+vi fibonacci.sh
+
+### insert script ###
+#!/bin/bash
+if [ $# -eq 1 ]
+then
+    jj=$1
+else
+    echo -n "Enter a Number :"
+    read jj
+fi
+
+bb=0
+cc=1
+echo "The Fibonacci sequence for the number $jj is : "
+for (( i=0;i<=jj;i++ ))
+do
+     echo -n "$bb "
+     aa=$((bb+cc))
+     bb=$cc
+     cc=$aa
+done
+echo
+
+### save and exit as usual ####
+
+### execute the command and check 20 numbers of the fibonacci sequence
+
+chmod u+x fibonacci.sh
+./fibonacci.sh 20 
