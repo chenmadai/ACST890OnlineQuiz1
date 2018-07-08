@@ -1,5 +1,6 @@
 ##### Question 2 ######
 ### create and open shell file regurgitator.sh 
+#######################
 
 vi regurgitator.sh 
 
@@ -32,6 +33,7 @@ chmod u+x regurgitator.sh
 
 ##### Question 3 ######
 ### create and open fibonacci.sh
+######################
 
 vi fibonacci.sh
 
